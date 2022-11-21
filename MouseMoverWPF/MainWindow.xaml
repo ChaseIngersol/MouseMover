@@ -1,0 +1,79 @@
+﻿<Window x:Class="MouseMover.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MouseMover"
+        mc:Ignorable="d"
+        Title="Mouse Mover" Height="300" Width="450" Background="#FF2D2A2E" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Title" Content="Mouse Mover 1.0" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="430" Grid.ColumnSpan="2" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="#00000000" Height="58" FontFamily="Cascadia Code">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="482.471" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFF7043" Offset="0"/>
+                    <GradientStop Color="#FFFFCA28" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="Start" Content="Start" Margin="87,142,20,0" VerticalAlignment="Top" Click="Start_Click" Foreground="#FFFFF9C4" Height="37" FontSize="22" UseLayoutRounding="False" FontFamily="Cascadia Code" BorderBrush="#FFFFE082">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Pad">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="131.634" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFFF7043"/>
+                    <GradientStop Color="#FFFFCA28" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+        </Button>
+        <Label x:Name="Author" Grid.Column="1" Content="© Chase Ingersol" VerticalAlignment="Top" Foreground="White" Height="20" Width="87" HorizontalAlignment="Left" FontFamily="Cascadia Code" FontSize="8" Margin="124,238,0,0"/>
+        <Button x:Name="Stop" Content="Stop" HorizontalAlignment="Left" Margin="20,142,0,0" VerticalAlignment="Top" Click="Stop_Click" Foreground="#FFFFCDD2" Height="37" Width="118" FontSize="22" UseLayoutRounding="False" FontFamily="Cascadia Code" BorderBrush="#FFEF5350" Grid.Column="1">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" SpreadMethod="Pad">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="131.634" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFEF5350" Offset="1"/>
+                    <GradientStop Color="#FFB71C1C" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+        </Button>
+        <Label x:Name="Status" Content="Stopped" HorizontalAlignment="Left" Margin="6,200,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="430" Grid.ColumnSpan="2" FontSize="24" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Height="58" FontFamily="Cascadia Code" Foreground="#FFF44336"/>
+
+    </Grid>
+</Window>
